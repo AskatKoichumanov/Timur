@@ -7,7 +7,7 @@ public class DataReader {
     private static Properties dataFile;
 
     static {
-        String path = "src\\test\\resources\\proporties\\data.properties";
+        String path = "src\\test\\resources\\properties\\data.properties";
         try {
             FileInputStream input = new FileInputStream(path);
             dataFile = new Properties();
