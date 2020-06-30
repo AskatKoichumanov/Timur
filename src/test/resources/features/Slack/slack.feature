@@ -3,23 +3,23 @@ Feature: slack API test
 
   @postViaAPI @checkViaAPI
   Scenario: Post via API check via API
-    When write message via API with text "Sorry, test1"
-    And  get message timeStamp with "Sorry, test1"
-    Then verify message via API with text "Sorry, test1"
+    When write message via API with text "Hi, This is me"
+    And  get message timeStamp with "Hi, This is me"
+    Then verify message via API with text "Hi, This is me"
     And  delete message
 
   @postViaSelenium @checkViaSelenium
   Scenario: Post via Selenium check via Selenium
     Given go to channel page
-    When  write message via Selenium with text "Sorry, test2"
-    Then  verify message via Selenium with text "Sorry, test2"
+    When  write message via Selenium with text "Hi, this me"
+    Then  verify message via Selenium with text "Hi, this me"
 
   @postViaAPI @checkViaSelenium
   Scenario: Post via API check via Selenium
-    When write message via API with text "Sorry, test3"
+    When write message via API with text "Hi, This Api"
     And  go to channel page
-    Then verify message via Selenium with text "Sorry, test3"
-    And  get message timeStamp with "Sorry, test3"
+    Then verify message via Selenium with text "Hi, This Api"
+    And  get message timeStamp with "Hi, This Api"
     And  delete message
 
   @postViaSelenium @checkViaAPI

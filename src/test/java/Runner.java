@@ -7,11 +7,11 @@ import org.junit.runner.RunWith;
         plugin = {"pretty","html:target/cucumber-html-report",
                 "json:target/cucumber.json","junit:target/cucumber.xml",
                 "rerun:target/rerun/txt"},
-        features = "src\\test\\resources\\features",
+        features = "src/test/resources/features",
         glue = "StepDefinitions",
         dryRun = false,
-        monochrome = false
-//        tags = "@slack"
+        monochrome = false,
+        tags = "@slack"
 )
 
 public class Runner {
